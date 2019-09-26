@@ -5,18 +5,28 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        System.out.println("Enter your score");
-        Scanner exsamresult = new Scanner(System.in);
-        double input = exsamresult.nextDouble();
+	// løsning til opgave 5.1
+         exameCalc();
+    }
 
-        if (input >= 60) {
-            System.out.println("you pass");
+    public static boolean exameCalc () {
+        Scanner input = new Scanner(System.in);
+        boolean i = true;
+        while (i = true) {
+            System.out.println("enter exam score");
+            int examScore = input.nextInt();
+            if (examScore >=60) {
+                System.out.println("you pass");
+
+            }
+            else if (examScore < 60 && examScore > 0) {
+                System.out.println("you fail");
+            }
+            else if (examScore == -1) {
+                System.out.println("exiting program");
+                return i = false;
+            }
         }
-        else {
-            System.out.println("you fail");
-        }
-
-
+      return i = false;
     }
 }
